@@ -182,7 +182,7 @@ generate_results <- function(estimators, model_name_suffix = "") {
   report_list <- list()
   bias_plots <- list()
   rmse_boxplots <- list()
-  
+  size <- 24
   # Generate reports, bias plots, and RMSE boxplots for each model
   for (i in mods) {
     # Generate report for the current model
@@ -194,10 +194,10 @@ generate_results <- function(estimators, model_name_suffix = "") {
       theme_bw() +
       xlab("") +
       theme(
-        text = element_text(size = groesse),
-        plot.title = element_text(size = groesse),
-        axis.title = element_text(size = groesse),
-        legend.text = element_text(size = groesse),
+        text = element_text(size = size),
+        plot.title = element_text(size = size),
+        axis.title = element_text(size = size),
+        legend.text = element_text(size = size),
         legend.position = "none",
         axis.text.x = element_text(angle = 45, hjust = 1)
       ) +
@@ -214,10 +214,10 @@ generate_results <- function(estimators, model_name_suffix = "") {
       theme_bw() +
       xlab("") +
       theme(
-        text = element_text(size = groesse),
-        plot.title = element_text(size = groesse),
-        axis.title = element_text(size = groesse),
-        legend.text = element_text(size = groesse),
+        text = element_text(size = size),
+        plot.title = element_text(size = size),
+        axis.title = element_text(size = size),
+        legend.text = element_text(size = size),
         legend.position = "none",
         axis.text.x = element_text(angle = 45, hjust = 1)
       )
