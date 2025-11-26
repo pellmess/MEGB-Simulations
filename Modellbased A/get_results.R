@@ -110,7 +110,7 @@ report <- function(estimators, model_name, qual = c("Bias", "RB", "RRMSE", "True
   
  
     
-      res_tabelle <- est_quality %>%
+      res_table <- est_quality %>%
         mutate(estimator = as.character(estimator)) %>%
         arrange(toupper(estimator)) %>%
         group_by(estimator) %>%
@@ -127,7 +127,7 @@ report <- function(estimators, model_name, qual = c("Bias", "RB", "RRMSE", "True
         kableExtra::kable_classic(full_width = F, latex_options = c("striped", "hold_position")) %>%
         kableExtra::add_header_above(c(" " = 1, "Bias" = 2, "RB" = 2, "RRMSE" = 2, "True RMSE" = 2), 
                                      escape = FALSE, line = TRUE)
-      tabelle_df <- est_quality %>%
+      table_df <- est_quality %>%
         mutate(estimator = as.character(estimator)) %>%
         arrange(toupper(estimator)) %>%
         group_by(estimator) %>%
@@ -138,7 +138,7 @@ report <- function(estimators, model_name, qual = c("Bias", "RB", "RRMSE", "True
       
       
       res <- plot_estimations(estimations = est_quality)
-      list(plots = res, tabelle = res_tabelle, tabelle_df = tabelle_df)
+      list(plots = res, table = res_table, table_df = table_df)
 }
 
 
