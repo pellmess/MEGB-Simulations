@@ -3,14 +3,14 @@ library(tidyverse)
 source("auxiliar/QualityMeasure.R")
 get_estimations <- function(estimator = "bhf", mod_name){
   
-  pfad <- paste0(mod_name, "/results/", estimator)
+  tmp_path <- paste0(mod_name, "/results/", estimator)
     
     csv_index <-
-      list.files(pfad) %>% grep(pattern = "es.csv")
+      list.files(tmp_path) %>% grep(pattern = "es.csv")
 
-    csv_path <- list.files(pfad, full.names = T)[csv_index]
+    csv_path <- list.files(tmp_path, full.names = T)[csv_index]
     if(length(csv_path) == 0){
-      stop(paste("no files found for:", pfad))
+      stop(paste("no files found for:", tmp_path))
     }
     if(length(csv_path) > 1) {
       tmp_csv <- lapply(csv_path, function(path){
@@ -224,7 +224,7 @@ generate_results <- function(estimators, model_name_suffix = "") {
     
     # Optionally save each combined plot
     combined_plot <- grid.arrange(bias_plots[[i]], rmse_boxplots[[i]], ncol = 2)
-    ggsave(filename = paste0("Stat Woche/combined_mod", i, model_name_suffix, "_testskript_2024.jpg"), combined_plot, height = height, width = width)
+
   }
   
   
