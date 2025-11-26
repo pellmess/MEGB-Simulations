@@ -257,7 +257,7 @@ library(kableExtra)
 
 for (nm in names(qm_results)) {
   df <- qm_results[[nm]]
-  cap <- paste0("Ergebnisse für ", gsub("_", "\\\\_", nm, fixed = TRUE))  # "_" escape
+  cap <- paste0("results for ", gsub("_", "\\\\_", nm, fixed = TRUE)) 
   
   print(
     kbl(
