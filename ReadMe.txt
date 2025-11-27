@@ -29,8 +29,8 @@ data_generation_mod1.R – data_generation_mod4.R
 
 Functions that implement the GBT, MERT and REEM
 - gtb.R – Function for Gradient Tree Boosting 
-- MEM_Boosting_VersionMERT.R
-- MEM_Boosting_VersionREEM.R 
+- MEM_Boosting_VersionMERT.R (Salditt et al.)
+- MEM_Boosting_VersionREEM.R (Salditt et al.)
 
 
 Modelbased B -------------------------------------------------------------------
@@ -52,7 +52,7 @@ QualityMeasure.R
 Functions that implement the MERT and REEM
 - gtb.R – Function for Gradient Tree Boosting (Salditt et al.)
 - MEM_Boosting_VersionMERT.R / MEM_Boosting_VersionREEM.R (Salditt et al.)
-– Mixed-effects boosting
+
 
 
 Project Structure --------------------------------------------------------------
@@ -86,8 +86,8 @@ Project Structure --------------------------------------------------------------
 │   ├── est.R                          Main estimation script (calls estimators)
 │   ├── get_results.R                  Aggregation and calculation of results
 │   ├── gtb.R                          Gradient Tree Boosting
-│   ├── MEM_Boosting_VersionMERT.R     Mixed-effects boosting (MERT version)
-│   └── MEM_Boosting_VersionREEM.R     Mixed-effects boosting (RE-EM version)
+│   ├── MEM_Boosting_VersionMERT.R     Mixed-effects boosting (MERT version) (Salditt et al.)
+│   └── MEM_Boosting_VersionREEM.R     Mixed-effects boosting (RE-EM version) (Salditt et al.)
 │
 └── Modelbased B/                      Model-based simulations – Version B
     ├── data_generation.R              Data generation
